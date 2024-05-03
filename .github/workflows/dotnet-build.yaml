@@ -21,7 +21,7 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "7.0.x"
+          dotnet-version: "8.0.x"
 
       - name: Format version string
         id: vars
@@ -33,7 +33,7 @@ jobs:
       - name: Package
         run: |
           mkdir -p ./build/plugins/${{ env.PLUGIN_NAME }}
-          cp -R ./bin/Debug/net7.0/* ./build/plugins/${{ env.PLUGIN_NAME }}
+          cp -R ./bin/Debug/net8.0/* ./build/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Create folders
         run: |
